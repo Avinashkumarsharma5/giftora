@@ -1,0 +1,6 @@
+{
+  "name": "Giftora",
+  "description": "A complete, premium modern full-stack Gift eCommerce platform with AI-powered personalized gift recommendations, elegant catalogs, cart, wishlists, and seamless admin analytics dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

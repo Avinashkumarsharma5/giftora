@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Overwrite Zinc with Elegant Dark blacks and rich grays */
+  --color-zinc-50: #fafafa;
+  --color-zinc-100: #f5f5f7;
+  --color-zinc-200: #e5e5eb;
+  --color-zinc-300: #c5c5d0;
+  --color-zinc-400: #9393a2;
+  --color-zinc-500: #626270;
+  --color-zinc-600: #42424b;
+  --color-zinc-700: #25252b;
+  --color-zinc-800: #141417;
+  --color-zinc-900: #0a0a0c;
+  --color-zinc-950: #040405; /* Deep luxury dark background from Elegant Dark */
+
+  /* Overwrite Rose with Violet-Fuchsia premium accents to swap "rose-500" cleanly across the app */
+  --color-rose-50: #0b081c;    /* Deep dark violet background */
+  --color-rose-100: #ddd6fe;   /* Soft violet light */
+  --color-rose-200: #c084fc;   /* Light fuchsia / purple */
+  --color-rose-300: #a78bfa;   /* Violet light */
+  --color-rose-400: #8b5cf6;   /* Violet medium */
+  --color-rose-500: #7c3aed;   /* Main Brand Violet-600 from Elegant Dark */
+  --color-rose-600: #6d28d9;   /* Deep Violet */
+  --color-rose-700: #4c1d95;   /* Dark Indigo / Violet */
+  --color-rose-800: #2e1065;
+  --color-rose-900: #1e1b4b;
+  --color-rose-950: #06020f;
+}
+
+@layer utilities {
+  .bg-elegant-dark-grid {
+    background-image: 
+      radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.05) 0%, transparent 60%),
+      radial-gradient(circle at 10% 20%, rgba(217, 70, 239, 0.03) 0%, transparent 40%);
+  }
+}
+
+/* Animations and transitions */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #040405;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
