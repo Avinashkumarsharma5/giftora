@@ -1,7 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import React, { useEffect } from "react";
 import { AppProvider, useApp } from "./context/AppContext";
-import { Header } from "./components/Header";
+import Header from "./components/Header";
 import { Footer } from "./components/Footer";
 import { HomeView } from "./components/HomeView";
 import { ShopView } from "./components/ShopView";
