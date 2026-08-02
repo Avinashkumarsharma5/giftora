@@ -113,7 +113,7 @@ export default function Navbar() {
       <MotionStyles />
 
       {/* ---------- Header ---------- */}
-      <header className="font-body sticky top-0 z-50 bg-[#FFF8F0]/95 backdrop-blur-xl border-b border-[#e7ddd2]">
+      <header className="font-body sticky top-0 z-50 bg-[#E87516]/95 text-white shadow-lg shadow-orange-950/15 backdrop-blur-xl border-b border-white/20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 py-3">
           <div className="flex items-center justify-between">
             {/* Logo - Left */}
@@ -121,11 +121,11 @@ export default function Navbar() {
               onClick={() => go("home")}
               className="flex items-center gap-2 group"
             >
-              <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-[#6B1F2A]">
+              <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-white/20 ring-1 ring-white/30">
                 <Gift className="h-4.5 w-4.5 text-[#FFF8F0]" size={18} />
-                <span className="absolute -top-1 -right-1 h-2.5 w-2.5 rounded-full bg-[#D4AF37] ring-2 ring-[#FFF8F0]" />
+                <span className="absolute -top-1 -right-1 h-2.5 w-2.5 rounded-full bg-white ring-2 ring-[#E87516]" />
               </span>
-              <span className="font-display text-2xl font-semibold tracking-tight text-[#3B2C24]">
+              <span className="font-display text-2xl font-semibold tracking-tight text-white">
                 Gifttora
               </span>
             </button>
@@ -137,7 +137,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => setOpen(!open)}
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-[#F9F5EF] text-[#6B1F2A] transition hover:bg-[#f4eadc]"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-white transition hover:bg-white/25"
                 >
                   <Search size={18} />
                 </button>
@@ -192,11 +192,11 @@ export default function Navbar() {
               <button
                 onClick={() => go("wishlist")}
                 aria-label="Wishlist"
-                  className="relative flex h-9 w-9 items-center justify-center rounded-full bg-[#F9F5EF] text-[#6B1F2A] transition hover:bg-[#f4eadc]"
+                  className="relative flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-white transition hover:bg-white/25"
               >
                 <Heart size={18} />
                 {wishlist.length > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-[#D4AF37] text-[10px] font-bold text-[#3B2C24] ring-2 ring-[#FFF8F0]">
+                  <span className="absolute -top-0.5 -right-0.5 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-white text-[10px] font-bold text-[#E87516] ring-2 ring-[#E87516]">
                     {wishlist.length}
                   </span>
                 )}
@@ -206,7 +206,7 @@ export default function Navbar() {
               <button
                 onClick={() => go(currentUser ? "profile" : "login")}
                 aria-label="Account"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-[#F9F5EF] text-[#6B1F2A] transition hover:bg-[#f4eadc]"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-white transition hover:bg-white/25"
               >
                 <User size={18} />
               </button>
@@ -216,7 +216,7 @@ export default function Navbar() {
       </header>
 
       {/* ---------- Bottom Navigation ---------- */}
-      <nav className="font-body fixed bottom-0 left-0 right-0 z-50 border-t border-[#e7ddd2] bg-[#FFF8F0]">
+      <nav className="font-body fixed bottom-0 left-0 right-0 z-50 border-t border-white/20 bg-[#E87516] text-white shadow-[0_-8px_24px_rgba(121,53,0,.15)]">
         <div className="relative h-[68px]">
           <div className="grid h-full grid-cols-4 max-w-md mx-auto">
             {navItems.map(({ key, label, icon: Icon }) => {
@@ -230,20 +230,20 @@ export default function Navbar() {
                   <Icon
                     size={20}
                     strokeWidth={active ? 2.4 : 1.8}
-                    className={active ? "text-[#6B1F2A]" : "text-[#8b817b]"}
+                    className="text-white"
                   />
                   <span
                     className={
                       active
-                        ? "font-semibold text-[#6B1F2A]"
-                        : "text-[#8b817b]"
+                        ? "font-semibold text-white"
+                        : "text-white/75"
                     }
                   >
                     {label}
                   </span>
                   <span
                     className={`h-1 w-1 rounded-full transition-opacity ${
-                      active ? "bg-[#D4AF37] opacity-100" : "opacity-0"
+                      active ? "bg-white opacity-100" : "opacity-0"
                     }`}
                   />
                 </button>
@@ -257,18 +257,18 @@ export default function Navbar() {
               <Grid2x2
                 size={20}
                 strokeWidth={moreOpen ? 2.4 : 1.8}
-                className={moreOpen ? "text-[#6B1F2A]" : "text-[#8b817b]"}
+                className="text-white"
               />
               <span
                 className={
-                  moreOpen ? "font-semibold text-[#6B1F2A]" : "text-[#8b817b]"
+                  moreOpen ? "font-semibold text-white" : "text-white/75"
                 }
               >
                 More
               </span>
               <span
                 className={`h-1 w-1 rounded-full transition-opacity ${
-                  moreOpen ? "bg-[#D4AF37] opacity-100" : "opacity-0"
+                  moreOpen ? "bg-white opacity-100" : "opacity-0"
                 }`}
               />
             </button>
@@ -280,10 +280,10 @@ export default function Navbar() {
             aria-label="Cart"
             className="absolute right-4 top-1/2 -translate-y-1/2"
           >
-            <span className="relative flex h-12 w-12 items-center justify-center rounded-full bg-[#6B1F2A] shadow-lg shadow-[#6B1F2A]/25 ring-2 ring-[#FFF8F0] transition hover:scale-105 active:scale-95">
-              <ShoppingBag size={20} className="text-[#FFF8F0]" />
+            <span className="relative flex h-12 w-12 items-center justify-center rounded-full bg-[#C85A00] shadow-lg shadow-orange-950/25 ring-2 ring-white/70 transition hover:scale-105 active:scale-95">
+              <ShoppingBag size={20} className="text-white" />
               {total > 0 && (
-                <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#D4AF37] text-[10px] font-bold text-[#3B2C24] ring-2 ring-[#FFF8F0]">
+                <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#6B1F2A] text-[10px] font-bold text-white ring-2 ring-[#E87516]">
                   {total > 9 ? "9+" : total}
                 </span>
               )}

@@ -78,7 +78,7 @@ input::placeholder, textarea::placeholder { color: #a99790; }
 button, a { transition: color .3s ease, background-color .3s ease, border-color .3s ease, box-shadow .3s ease, transform .3s ease; }
 article.rounded-2xl, article.rounded-3xl, .shadow-lg.rounded-3xl { box-shadow: 0 10px 30px rgba(59, 44, 36, .08); }
 article.rounded-2xl:hover, article.rounded-3xl:hover { box-shadow: 0 20px 42px rgba(59, 44, 36, .14); }
-.site-footer { background: #6B1F2A !important; }
+.site-footer { background: #E87516 !important; }
 
 /* Header */
 .site-header { box-shadow: 0 5px 24px rgba(76, 28, 23, .035); }
@@ -104,12 +104,13 @@ article.rounded-2xl:hover, article.rounded-3xl:hover { box-shadow: 0 20px 42px r
 .mobile-nav button:last-child { border-bottom: 0; }
 
 /* Footer */
-.site-footer h3 { color: #fff5ef; font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-.site-footer li button, .site-footer a { color: rgba(255, 235, 228, .65); font-size: .82rem; transition: color .2s ease; }
+.site-footer h3 { color: #fff; font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.site-footer li button, .site-footer a { color: rgba(255, 255, 255, .78); font-size: .82rem; transition: color .2s ease; }
 .site-footer li button:hover, .site-footer a:hover { color: #fff; }
 .brand--footer { color: #fff8f4; }
-.brand--footer .brand__mark { background: #f4c0b4; color: #711827; box-shadow: none; }
-.footer-social { display: grid; width: 2rem; height: 2rem; place-items: center; border: 1px solid rgba(255,255,255,.18); border-radius: .5rem; color: #fff0eb !important; }
-.footer-social:hover { border-color: #f4c0b4; background: #f4c0b4; color: #711827 !important; }
+.brand--footer .brand__mark { background: rgba(255,255,255,.18); color: #fff; box-shadow: none; }
+.footer-social { display: grid; width: 2rem; height: 2rem; place-items: center; border: 1px solid rgba(255,255,255,.35); border-radius: .5rem; color: #fff !important; }
+.footer-social:hover { border-color: #fff; background: rgba(255,255,255,.18); color: #fff !important; }
+.site-footer .text-rose-300 { color: #fff !important; }
 
 @media (max-width: 640px) { .site-header__inner { height: 64px; gap: .4rem; } .brand { font-size: 1.25rem; } .brand__mark { width: 1.8rem; height: 1.8rem; } .user-action { width: 2.4rem; padding: .65rem; justify-content: center; } }
