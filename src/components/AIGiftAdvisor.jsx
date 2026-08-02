@@ -43,26 +43,15 @@ export const AIGiftAdvisor = () => {
             }
         }, 1800);
         try {
-            const response = await fetch("/api/ai/recommend", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    recipient,
-                    occasion,
-                    interests: interests.join(", "),
-                    budget
-                })
-            });
-            if (!response.ok) {
-                throw new Error("AI Recommendation service failed to respond.");
-            }
-            const data = await response.json();
-            setRecommendations(data.recommendations || []);
-            showToast("Generated 4 elite custom gift ideas!", "success");
-        }
-        catch (err) {
-            console.error(err);
-            showToast(err.message || "Failed to generate recommendations. Please verify your internet connection.", "error");
+            await new Promise((resolve) => setTimeout(resolve, 850));
+            const curated = interests.slice(0, 4).map((interest, index) => ({
+                giftName: `${occasion} ${interest} Gift Edit`,
+                reason: `A thoughtful ${interest.toLowerCase()} pick curated for your ${recipient.toLowerCase()}, with a personal ${occasion.toLowerCase()} feel.`,
+                priceEstimate: budget,
+                suggestedCategory: interest
+            }));
+            setRecommendations(curated.length ? curated : [{ giftName: "Signature Gift Box", reason: "A considered local recommendation for a special occasion.", priceEstimate: budget, suggestedCategory: "Curated" }]);
+            showToast("Generated local gift recommendations!", "success");
         }
         finally {
             clearInterval(interval);
